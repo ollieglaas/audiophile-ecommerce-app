@@ -1,16 +1,18 @@
 import React from "react";
 
+interface ButtonProps {
+  customText?: string;
+  onClick?: () => void;
+  takeUpFullWidth?: boolean;
+  disabled?: boolean;
+}
+
 const OrangeButton = ({
   customText,
   onClick,
   takeUpFullWidth,
   disabled,
-}: {
-  customText?: string;
-  onClick?: () => void;
-  takeUpFullWidth?: boolean;
-  disabled?: boolean;
-}) => {
+}: ButtonProps) => {
   return (
     <button
       className={`bg-[#D87D4A] px-6 py-3 ${!disabled && "cursor-pointer"} ${
